@@ -22,7 +22,6 @@ class MainActivity : AppCompatActivity() {
         tvSelectedDate = findViewById(R.id.tvSelectedDate)
         tvAgeInMinutes = findViewById(R.id.tvAgeInMinutes)
 
-
         btnDatePicker.setOnClickListener {
 
             clickDatePicker()
@@ -51,12 +50,12 @@ class MainActivity : AppCompatActivity() {
                 val theDate = sdf.parse(selectedDate)
                 theDate?.let{
 
-                    val selectedDateInMinutes = theDate.time /86400000
+                    val selectedDateInMinutes = theDate.time / 60000
 
                     val currentDate = sdf.parse(sdf.format(System.currentTimeMillis()))
                     currentDate?.let{
 
-                        val currentDateInMinutes = currentDate.time/ 86400000
+                        val currentDateInMinutes = currentDate.time/ 60000
 
                         val differenceInMinutes = currentDateInMinutes - selectedDateInMinutes
 
@@ -64,13 +63,12 @@ class MainActivity : AppCompatActivity() {
                     }
                 }
 
-
             },
             year,
             month,
             day
         )
-        dpd.datePicker.maxDate = System.currentTimeMillis() - 86400000
+        dpd.datePicker.maxDate = System.currentTimeMillis() - 60000
         dpd.show()
 
     }

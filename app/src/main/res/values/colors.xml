@@ -10,4 +10,9 @@
     <color name="textGreen">#06d6a0</color>
     <color name="Back_Orange">#fec89a</color>
     <color name="LightGrey">#b7b7a4</color>
-</resources
+    <color name="DarkBlue">#264653</color>
+    <color name="LightGreen">#2a9d8f</color>
+    <color name="GrayYellow">#e9c46a</color>
+    <color name="Orange">#f4a261</color>
+    <color name="LightRed">#e76f51</color>
+</resources>
